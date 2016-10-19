@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: course-client
+  annotations:
+    appName: course-client
+    version: "1"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: course-client
+    spec:
+      containers:
+      - name: server
+        image: paulbakker/kubernetescourse-client
+        ports:
+        - containerPort: 8080
