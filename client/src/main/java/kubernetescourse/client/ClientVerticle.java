@@ -8,7 +8,7 @@ import io.vertx.core.logging.LoggerFactory;
 
 public class ClientVerticle extends AbstractVerticle {
     private final static Logger LOG = LoggerFactory.getLogger(ClientVerticle.class);
-    private final static String SERVER = "kubernetescourse-server.default.svc.cluster.local";
+    private final static String SERVER = "course-server";
 
     @Override
     public void start() throws Exception {
